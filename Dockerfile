@@ -6,3 +6,4 @@ RUN apt-get update \
  && rm -f *.html \
  && git clone https://github.com/luciaellan-cookapps/test-web.git .
  
+EXPOSE 80
