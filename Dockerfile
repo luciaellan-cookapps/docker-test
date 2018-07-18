@@ -1,5 +1,8 @@
-FROM alpine:latest
+FROM ubuntu:latest
 
-RUN apk update \
- && apk upgrade \
- && apk add rsync openssh-client
+RUN apt-get update \
+ && apt-get install nginx git -y \
+ && cd /var/www/html/ \
+ && rm -f *.html \
+ && git clone https://github.com/luciaellan-cookapps/test-web.git .
+ 
